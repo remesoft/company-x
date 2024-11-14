@@ -22,7 +22,7 @@ export default function MobileMenu({ openMenu, setOpenMenu }) {
         </div>
         <div className="border-b py-4">
           <details>
-            <summary class="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
+            <summary className="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
               Home
               <ArrowDown01Icon size={10} />
             </summary>
@@ -60,7 +60,7 @@ export default function MobileMenu({ openMenu, setOpenMenu }) {
             </ul>
           </details>
           <details>
-            <summary class="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
+            <summary className="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
               Listing
               <ArrowDown01Icon size={10} />
             </summary>
@@ -98,7 +98,7 @@ export default function MobileMenu({ openMenu, setOpenMenu }) {
             </ul>
           </details>
           <details>
-            <summary class="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
+            <summary className="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
               Users
               <ArrowDown01Icon size={10} />
             </summary>
@@ -136,7 +136,7 @@ export default function MobileMenu({ openMenu, setOpenMenu }) {
             </ul>
           </details>
           <details>
-            <summary class="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
+            <summary className="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
               Pages
               <ArrowDown01Icon size={10} />
             </summary>
@@ -174,7 +174,7 @@ export default function MobileMenu({ openMenu, setOpenMenu }) {
             </ul>
           </details>
           <details>
-            <summary class="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
+            <summary className="flex list-none items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
               Blogs
               <ArrowDown01Icon size={10} />
             </summary>
