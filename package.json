@@ -10,12 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "hugeicons-react": "^0.3.0",
-    "i": "^0.3.7",
-    "npm": "^10.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "hugeicons-react": "^0.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

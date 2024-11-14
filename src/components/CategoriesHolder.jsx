@@ -3,7 +3,7 @@ import CategoryCard from "./ui/CategoryCard";
 import { Link } from "react-router-dom";
 import CategoryImage from "../assets/images/category.jpg";
 
-export default function CategoryHolder() {
+export default function CategoriesHolder() {
   return (
     <section className="pt-10 lg:pt-16">
       <div className="mx-auto max-w-[1250px] px-2">
