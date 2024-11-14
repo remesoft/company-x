@@ -4,3 +4,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles for Splide arrows */
+
+.splide__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.356);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1;
+  background-color: white;
+}
+
+.splide__arrow--prev {
+  left: -18px;
+}
+
+.splide__arrow--next {
+  right: -18px;
+}
+
+.splide__arrow--prev::before {
+  transform: rotate(180deg);
+}
+
+/* Custom pagination styles */
+.splide__pagination {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  z-index: 2;
+}
+
+.splide__pagination__page {
+  height: 6px;
+  width: 6px;
+  background-color: #e5e7eb; /* Inactive pagination dot color */
+}
+
+.splide__pagination__page.is-active {
+  background-color: #0a65fc; /* Active pagination dot color */
+}
+
+/* Hide arrows on mobile (screens smaller than 768px) */
+@media screen and (max-width: 768px) {
+  .splide__arrow {
+    display: none;
+  }
+  /* Custom pagination styles */
+  .splide__pagination {
+    bottom: -20px;
+  }
+}
