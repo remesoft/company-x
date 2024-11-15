@@ -18,10 +18,9 @@ function Footer() {
     "Digital Marketing",
     "Social Media",
   ];
-
   return (
     <section className="dark__bg">
-      <div className="footer__top mt-12 pt-4">
+      <div className="footer__top mt-12 pt-4 md:border-b-0">
         <ul>
           <li className="bg-dark">
             <CollapsibleMenu title="Categories" menuItems={menuItems} />
@@ -37,9 +36,11 @@ function Footer() {
         <p>© 2024 RiceTheme. All Right Reserved.</p>
         <div className="flex justify-center gap-5">
           <div className="flex gap-2">
+            {" "}
             <GlobeIcon /> English
           </div>
           <div className="flex gap-2">
+            {" "}
             <Dollar01Icon /> USD
           </div>
         </div>
