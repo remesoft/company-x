@@ -6,6 +6,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom colors */
+.dark__bg{
+    background-color: #131313;
+}
+
 /* Custom styles for Splide arrows */
 
 .splide__arrow {
