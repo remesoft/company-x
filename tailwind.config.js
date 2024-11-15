@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         dmSans: ["'DM Sans'", "sans-serif"],
+        dmSerif: ["'DM Serif Display'", "serif"],
       },
     },
   },
