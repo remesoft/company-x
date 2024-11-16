@@ -22,9 +22,6 @@ function Home() {
             There is some post in social media about us.
           </p>
           <div className="relative mx-auto mt-5 grid max-w-[90%] grid-cols-1 gap-4 lg:grid-cols-3">
-            <button className="absolute rounded-md bg-blue-600 px-4 py-2 text-white">
-              Load More
-            </button>
             <div>
               <TestimonialCard
                 avatar={avatar}

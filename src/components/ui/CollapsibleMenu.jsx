@@ -36,7 +36,7 @@ const CollapsibleMenu = ({ title, menuItems }) => {
 
       {/* Expanded list for large screens */}
       <ul className="my-4 hidden flex-col md:block">
-      <h3 className="text-xl text-slate-200 md:mb-4">{title}</h3>
+        <h3 className="text-xl text-slate-200 md:mb-4">{title}</h3>
         {menuItems.map((item, index) => (
           <li key={index} className="border-slate-400">
             <Link className="block px-4 py-2 text-slate-200 hover:text-slate-100">
