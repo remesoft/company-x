@@ -29,6 +29,7 @@ function Footer() {
     "Linkedin",
     "Youtube",
   ];
+
   return (
     <section className="dark__bg">
       {/* Footer Top */}
@@ -63,8 +64,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      {/* Footer Bottom */}
-      <div className="mt-8 flex flex-col items-center justify-around gap-7 border-t-2 border-solid border-gray-800 pb-4 text-white md:flex-row">
+      <div className="footer__bottom mt-8 flex flex-col items-center justify-around gap-7 border-t-2 border-solid border-gray-800 pb-4 text-white md:flex-row">
         <img src={logo} alt="logo" className="mt-8 h-10 text-white" />
         <p className="mt-8">© 2024 RiceTheme. All Right Reserved.</p>
         <div className="mt-8 flex justify-center gap-5">
@@ -81,5 +81,4 @@ function Footer() {
     </section>
   );
 }
-
 export default Footer;

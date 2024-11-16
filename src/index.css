@@ -7,8 +7,8 @@
 @tailwind utilities;
 
 /* Custom colors */
-.dark__bg{
-    background-color: #131313;
+.dark__bg {
+  background-color: #131313;
 }
 
 /* Custom styles for Splide arrows */
@@ -74,4 +74,11 @@
   .splide__pagination {
     bottom: -20px;
   }
+}
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: masonry;
+  gap: 16px;
 }
