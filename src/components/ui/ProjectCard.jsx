@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/images/banner.png";
+import image from "../../assets/images/banners/banner.png";
 import logo from "../../assets/images/avatar.jpg";
 import { Clock01Icon, Contact01Icon, Tag01Icon } from "hugeicons-react";
 import { Link } from "react-router-dom";

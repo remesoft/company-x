@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/images/banner.png";
+import banner from "../assets/images/banners/banner.png";
 import { Search01Icon } from "hugeicons-react";
 
 function Banner() {
