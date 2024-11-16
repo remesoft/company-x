@@ -33,7 +33,7 @@ const CollapsibleMenu = ({ title, menuItems, textColor, border, mode = "responsi
         >
           {menuItems.map((item, index) => (
             <li key={index} className="border-slate-400">
-              <Link className={`block px-4 py-2 ${textColor} hover:text-slate-100`}>
+              <Link className={`block px-4 py-2 ${textColor}`}>
                 {item}
               </Link>
             </li>
