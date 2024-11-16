@@ -1,5 +1,12 @@
 import React from "react";
+import BannerSecondary from "../components/BannerSecondary";
+import ServiceManager from "../components/ServiceManager";
 
 export default function Services() {
-  return <div>Services</div>;
+  return (
+    <React.Fragment>
+      <BannerSecondary />
+      <ServiceManager />
+    </React.Fragment>
+  );
 }

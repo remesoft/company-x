@@ -8,14 +8,14 @@ import FAQs from "../components/FAQs";
 
 function Home() {
   return (
-    <div>
+    <React.Fragment>
       <Banner />
       <CategoriesHolder />
       <ServiceSlider />
       <LatestProjects />
       <Testimonial />
       <FAQs />
-    </div>
+    </React.Fragment>
   );
 }
 
