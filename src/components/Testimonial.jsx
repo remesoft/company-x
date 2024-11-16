@@ -24,7 +24,7 @@ export default function Testimonial() {
           className={`relative mt-10 ${expend ? "h-auto" : "h-[450px]"} columns-1 gap-4 overflow-hidden md:columns-2 lg:columns-3`}
         >
           {testimonials.map((data, index) => (
-            <TestimonialCard data={data} />
+            <TestimonialCard key={index} data={data} />
           ))}
           <div
             className={`absolute bottom-0 left-0 flex h-[200px] w-full justify-center bg-gradient-to-t from-white to-transparent`}
