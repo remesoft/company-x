@@ -256,10 +256,7 @@ export default function HeaderTop({ setOpenMenu }) {
               placeholder="Search our services..."
             />
           </form>
-          <button className="hidden h-full px-4 py-2 lg:flex">Sign in</button>
-          <button className="my-2 block p-2 lg:hidden">
-            <Search01Icon size={20} />
-          </button>
+          <button className="h-full px-4 py-2 lg:flex">Sign in</button>
         </div>
       </div>
     </header>
