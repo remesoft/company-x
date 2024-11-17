@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Services from "../pages/Services";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
+import { ServicePayment } from "../pages/ServicePayment";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: "services",
         element: <Services />,
+      },
+      {
+        path: "services/payment",
+        element: <ServicePayment />,
       },
     ],
   },
