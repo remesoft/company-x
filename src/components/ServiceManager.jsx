@@ -31,8 +31,6 @@ export default function ServiceManager() {
 
   return (
     <section className="mx-auto max-w-[1250px] px-4 py-16">
-      <div>filter and others staff</div>
-
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {currentItems.map((data, index) => (
           <ServiceCard key={index} data={data} more={true} />

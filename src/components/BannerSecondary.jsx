@@ -10,7 +10,7 @@ export default function BannerSecondary() {
     >
       <div className="mx-auto w-[1250px] px-4">
         <h1 className="mb-4 text-3xl font-semibold text-white">
-          Service Listing
+          Services Listing
         </h1>
         <form
           action=""
