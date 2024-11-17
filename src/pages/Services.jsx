@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BannerSecondary from "../components/BannerSecondary";
 import ServiceManager from "../components/ServiceManager";
 
