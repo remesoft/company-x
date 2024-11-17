@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Services from "../pages/Services";
 import NotFound from "../pages/NotFound";
 import ServiceDetails from "../pages/ServiceDetails";
+import ServicePayment from "../pages/ServicePayment";
 
 export const router = createBrowserRouter([
   {
