@@ -4,7 +4,7 @@ const FAQs = () => {
   return (
     <>
       <section className="py-12">
-        <div className="mx-auto w-11/12">
+        <div className="mx-2 max-w-[1150px] lg:mx-auto">
           <h3 className="mb-4 text-2xl font-semibold">FAQs</h3>
           <div className="">
             <ul>
