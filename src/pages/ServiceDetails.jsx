@@ -3,42 +3,43 @@ import {
   EyeIcon,
   FavouriteIcon,
   InformationCircleIcon,
-  Share02Icon,
   Share04Icon,
   ShoppingBasket03Icon,
   StarIcon,
-  StarsIcon,
 } from "hugeicons-react";
 import React from "react";
 import serviceImage from "../assets/service/service-01.jpg";
 import FAQs from "../components/FAQs";
 import avatar from "../assets/images/avatar.jpg";
 import PricingTab from "../components/ui/PriceTab";
+import Gallery from "../components/ui/Gallery";
+import data from "../data/service";
+import PackageTable from "../components/ui/PackageTable";
 
 export default function ServiceDetails() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 py-8">
+      {/* title and others information  */}
       <section>
-        <h1 className="py-2 text-2xl font-semibold">
-          I will do figma website design, figma landing page
-        </h1>
+        <h1 className="py-2 text-2xl font-semibold">{data.title}</h1>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2">
               <StarIcon size={18} fill="#FFC402" color="#FFC402" />
-              4.1 &#40;2 Review&#41;
+              {data.reviews.ratings} &#40; {data.reviews.total_reviews}&nbsp;
+              Review &#41;
             </span>
             <span className="flex items-center gap-2">
               <ShoppingBasket03Icon size={18} />
-              10 Sold
+              {data.sold} Sold
             </span>
             <span className="flex items-center gap-2">
               <EyeIcon size={18} />
-              1400 Views
+              {data.views} Views
             </span>
             <span className="flex items-center gap-2">
               <Clock01Icon size={18} className="text-[##FFC402]" />
-              July 2, 2024
+              {data.createdAt}
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -51,155 +52,20 @@ export default function ServiceDetails() {
           </div>
         </div>
       </section>
+
+      {/* images and other information  */}
       <section className="mt-6 flex gap-4">
         <div className="w-2/3">
-          {/* image area start  */}
-          <div>
-            <img src={serviceImage} alt="service image" />
-            <div className="mt-4 flex gap-2">
-              <img
-                src={serviceImage}
-                alt="service image"
-                className="h-20 rounded-md"
-              />
-              <img
-                src={serviceImage}
-                alt="service image"
-                className="h-20 rounded-md"
-              />
-              <img
-                src={serviceImage}
-                alt="service image"
-                className="h-20 rounded-md"
-              />
-              <img
-                src={serviceImage}
-                alt="service image"
-                className="h-20 rounded-md"
-              />
-            </div>
-          </div>
+          <Gallery images={data.images} />
 
           {/* description area start  */}
           <div className="border-b py-6">
             <h3 className="text-2xl font-bold">Descriptions</h3>
-            <p className="mt-2">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit.Neque porro quisquam est, qui
-              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-              sed quia non numquam eius modi tempora incidunt ut labore et
-              dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-              veniam, quis nostrum exercitationem ullam corporis suscipit
-              laboriosam, nisi ut aliquid ex ea commodi consequatur?
-            </p>
+            <p className="mt-2">{data.description}</p>
           </div>
 
           {/* packages area start  */}
-          <div class="py-6">
-            <h3 className="text-2xl font-bold">Packages</h3>
-            <div class="mt-4 overflow-x-auto">
-              <table class="w-full table-auto border-collapse border border-gray-200 text-left">
-                <thead>
-                  <tr>
-                    <th class="border border-gray-200 p-4 font-normal">
-                      Packages
-                    </th>
-                    <th class="border border-gray-200 p-4 text-center">
-                      <div class="font-semibold">Basic</div>
-                      <div class="text-xl font-bold">$99</div>
-                      <button class="mt-2 w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-                        Select
-                      </button>
-                    </th>
-                    <th class="border border-gray-200 p-4 text-center">
-                      <div class="font-semibold">Standard</div>
-                      <div class="text-xl font-bold">$249</div>
-                      <button class="mt-2 w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-                        Select
-                      </button>
-                    </th>
-                    <th class="border border-gray-200 p-4 text-center">
-                      <div class="font-semibold">Premium</div>
-                      <div class="text-xl font-bold">$559</div>
-                      <button class="mt-2 w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-                        Select
-                      </button>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="bg-gray-100">
-                    <td class="border border-gray-200 p-4">Delivery Time</td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      3 day
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      6 day
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      10 day
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border border-gray-200 p-4">
-                      Number of Revisions
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      unlimited
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      unlimited
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      unlimited
-                    </td>
-                  </tr>
-                  <tr class="bg-gray-100">
-                    <td class="border border-gray-200 p-4">
-                      Responsive Design
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      <span class="text-green-600">✔</span>
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      <span class="text-green-600">✔</span>
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      <span class="text-green-600">✔</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border border-gray-200 p-4">Source File</td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      <span class="text-green-600">✔</span>
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      <span class="text-green-600">✔</span>
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      <span class="text-green-600">✔</span>
-                    </td>
-                  </tr>
-                  <tr class="bg-gray-100">
-                    <td class="border border-gray-200 p-4">Prototype</td>
-                    <td class="border border-gray-200 p-4 text-center">–</td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      <span class="text-green-600">✔</span>
-                    </td>
-                    <td class="border border-gray-200 p-4 text-center">
-                      <span class="text-green-600">✔</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="mt-4 text-sm">
-              You can add services add-ons on the next page.
-            </p>
-          </div>
+          <PackageTable data={data.packages} />
 
           {/* faqs area start */}
           <FAQs />
