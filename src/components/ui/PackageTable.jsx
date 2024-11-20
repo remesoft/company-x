@@ -1,7 +1,9 @@
-import React from "react";
-
 export default function PackageTable({ data }) {
-  console.log(data);
+  // Extract all unique features from packages
+  const uniqueFeatures = Array.from(
+    new Set(data.flatMap((pkg) => pkg.features.map((feature) => feature.name))),
+  );
+
   return (
     <div className="py-6">
       <h3 className="text-2xl font-bold">Packages</h3>
@@ -10,87 +12,54 @@ export default function PackageTable({ data }) {
           <thead>
             <tr>
               <th className="border border-gray-200 p-4 font-normal">
-                Packages
+                Features
               </th>
-              
-              <th className="border border-gray-200 p-4 text-center">
-                <div className="font-semibold">Basic</div>
-                <div className="text-xl font-bold">$99</div>
-                <button className="mt-2 w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-                  Select
-                </button>
-              </th>
-              <th className="border border-gray-200 p-4 text-center">
-                <div className="font-semibold">Standard</div>
-                <div className="text-xl font-bold">$249</div>
-                <button className="mt-2 w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-                  Select
-                </button>
-              </th>
-              <th className="border border-gray-200 p-4 text-center">
-                <div className="font-semibold">Premium</div>
-                <div className="text-xl font-bold">$559</div>
-                <button className="mt-2 w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-                  Select
-                </button>
-              </th>
+              {data.map((pkg, index) => (
+                <th
+                  className="border border-gray-200 p-4 text-center"
+                  key={index}
+                >
+                  <div className="font-semibold">{pkg.name}</div>
+                  <div className="text-xl font-bold">{pkg.price}</div>
+                  <button className="mt-2 w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+                    Select
+                  </button>
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-gray-100">
-              <td className="border border-gray-200 p-4">Delivery Time</td>
-              <td className="border border-gray-200 p-4 text-center">3 day</td>
-              <td className="border border-gray-200 p-4 text-center">6 day</td>
-              <td className="border border-gray-200 p-4 text-center">10 day</td>
-            </tr>
-            <tr>
-              <td className="border border-gray-200 p-4">
-                Number of Revisions
-              </td>
-              <td className="border border-gray-200 p-4 text-center">
-                unlimited
-              </td>
-              <td className="border border-gray-200 p-4 text-center">
-                unlimited
-              </td>
-              <td className="border border-gray-200 p-4 text-center">
-                unlimited
-              </td>
-            </tr>
-            <tr className="bg-gray-100">
-              <td className="border border-gray-200 p-4">Responsive Design</td>
-              <td className="border border-gray-200 p-4 text-center">
-                <span className="text-green-600">✔</span>
-              </td>
-              <td className="border border-gray-200 p-4 text-center">
-                <span className="text-green-600">✔</span>
-              </td>
-              <td className="border border-gray-200 p-4 text-center">
-                <span className="text-green-600">✔</span>
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-gray-200 p-4">Source File</td>
-              <td className="border border-gray-200 p-4 text-center">
-                <span className="text-green-600">✔</span>
-              </td>
-              <td className="border border-gray-200 p-4 text-center">
-                <span className="text-green-600">✔</span>
-              </td>
-              <td className="border border-gray-200 p-4 text-center">
-                <span className="text-green-600">✔</span>
-              </td>
-            </tr>
-            <tr className="bg-gray-100">
-              <td className="border border-gray-200 p-4">Prototype</td>
-              <td className="border border-gray-200 p-4 text-center">–</td>
-              <td className="border border-gray-200 p-4 text-center">
-                <span className="text-green-600">✔</span>
-              </td>
-              <td className="border border-gray-200 p-4 text-center">
-                <span className="text-green-600">✔</span>
-              </td>
-            </tr>
+            {uniqueFeatures.map((featureName, rowIndex) => (
+              <tr
+                key={rowIndex}
+                className={rowIndex % 2 === 0 ? "bg-gray-100" : ""}
+              >
+                <td className="border border-gray-200 p-4">{featureName}</td>
+                {data.map((pkg, colIndex) => {
+                  const feature = pkg.features.find(
+                    (f) => f.name === featureName,
+                  );
+                  return (
+                    <td
+                      key={colIndex}
+                      className="border border-gray-200 p-4 text-center"
+                    >
+                      {feature ? (
+                        feature.value === "Included" ? (
+                          <span className="text-green-600">✔</span>
+                        ) : feature.value === "Not Included" ? (
+                          "–"
+                        ) : (
+                          feature.value
+                        )
+                      ) : (
+                        "N/A"
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
